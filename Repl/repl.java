@@ -18,19 +18,21 @@ public class repl{
             lockahead = operation[position];
         }
         
-        char nextToken(){
+        public char nextToken(){
             position++;
-            if(operation[position] == ' ' || operation[position] == '\n')
+            if()
                 nextToken();
 
-            if(position < 255)
+            if(position < operation.length())
                 lockahead = operation[position];
             else
                 lockahead = '\0';
         }
 
-        public boolean  match(char c){
-            return c == lockahead ? true : false;
+        public boolean match(char c){
+            if(c == lockahead) 
+                return true; 
+            return false;
         }
 
         

@@ -8,14 +8,14 @@ defmodule Symbologist do
     char list[11] = "0123456789";
 
     int i = 0;
-    while(i < 10){
+    while(i < 10) do
       if (REPL.match(list[i])){
         REPL.nextToken();
         IO.puts(list[i]);
         return;
       }
       i++;
-    }
+    end
 
     IO.puts("Error: Operando not valued.");
     exit(1);
@@ -45,7 +45,6 @@ defmodule Symbologist do
     IO.puts(lockahead);
 
     IO.puts("Error: caracter inexistent");
-    exit(1);
   end
 end
 
@@ -79,4 +78,4 @@ char lockahead = operation[position];
 
 Symbologist.e()
 
-IO.puts MathUtils.fatorial(5)
+# IO.puts MathUtils.fatorial(5)
